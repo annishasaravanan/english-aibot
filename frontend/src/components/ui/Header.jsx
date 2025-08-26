@@ -88,19 +88,14 @@ const Header = () => {
                 type="text"
                 name="search"
                 placeholder="Search lessons, vocabulary..."
-                className={`w-full pl-10 pr-4 py-2 border rounded-lg transition-all duration-200 ease-gentle focus:outline-none ${
-                  isSearchFocused 
-                    ? 'border-primary ring-2 ring-primary-100 bg-surface' :'border-border bg-surface-50 hover:bg-surface'
-                }`}
-                onFocus={() => setIsSearchFocused(true)}
-                onBlur={() => setIsSearchFocused(false)}
+                className="w-full pl-10 pr-4 py-2 border rounded-lg bg-surface-50 focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
               />
             </div>
           </form>
         </div>
 
         {/* User Menu */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-2">
           {/* Mobile Search Button */}
           <button 
             className="md:hidden p-2 rounded-lg hover:bg-surface-100 transition-colors duration-200"
@@ -152,22 +147,22 @@ const Header = () => {
                   </div>
                   
                   <button
-                    onClick={handleProfileClick}
-                    className="w-full flex items-center px-4 py-2 text-sm text-text-primary hover:bg-surface-100 transition-colors duration-200"
-                  >
-                    <Icon name="Settings" size={16} className="mr-3 text-text-secondary" />
-                    Profile & Settings
-                  </button>
-                  
-                  <button
                     onClick={() => {
                       navigate('/personalized-dashboard');
                       setIsUserMenuOpen(false);
                     }}
                     className="w-full flex items-center px-4 py-2 text-sm text-text-primary hover:bg-surface-100 transition-colors duration-200"
                   >
-                    <Icon name="BarChart3" size={16} className="mr-3 text-text-secondary" />
-                    Progress Dashboard
+                    <Icon name="LayoutDashboard" size={16} className="mr-3 text-text-secondary" />
+                    Dashboard
+                  </button>
+
+                  <button
+                    onClick={handleProfileClick}
+                    className="w-full flex items-center px-4 py-2 text-sm text-text-primary hover:bg-surface-100 transition-colors duration-200"
+                  >
+                    <Icon name="Settings" size={16} className="mr-3 text-text-secondary" />
+                    Profile & Settings
                   </button>
                   
                   <div className="border-t border-border mt-2 pt-2">

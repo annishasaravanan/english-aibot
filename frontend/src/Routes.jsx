@@ -4,10 +4,9 @@ import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
 import Header from "components/ui/Header";
 import Sidebar from "components/ui/Sidebar";
-
-// Page imports
 import AuthenticationLoginRegister from "pages/authentication-login-register";
 import PersonalizedDashboard from "pages/personalized-dashboard";
+import AuthSuccess from "pages/auth-success";
 import AiChatInterface from "pages/ai-chat-interface";
 import VocabularyLearningHub from "pages/vocabulary-learning-hub";
 import GrammarCorrectionTool from "pages/grammar-correction-tool";
@@ -25,6 +24,7 @@ const Routes = () => {
             <Route path="/" element={<AuthenticationLoginRegister />} />
             <Route path="/authentication-login-register" element={<AuthenticationLoginRegister />} />
             <Route path="/personalized-dashboard" element={<PersonalizedDashboard />} />
+            <Route path="/auth-success" element={<AuthSuccess />} />
             <Route path="/ai-chat-interface" element={<AiChatInterface />} />
             <Route path="/vocabulary-learning-hub" element={<VocabularyLearningHub />} />
             <Route path="/grammar-correction-tool" element={<GrammarCorrectionTool />} />
